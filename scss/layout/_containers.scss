@@ -1,0 +1,210 @@
+.sectionDivider {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  @media screen and (max-width: 375px) {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+}
+.projectSection {
+  background-color: $light-teal;
+  position: relative;
+}
+.contact {
+  background-color: #C8C8C8;
+}
+.contactLink{
+  color: #326273;
+}
+.contactMargin {
+  margin-top: 8%;
+  @media screen and (max-width: 600px) {
+    text-align: center;
+  }
+}
+.collapsible-header {
+  font-weight: 700;
+  font-family: 'Nunito', sans-serif;
+}
+.collapsible-body {
+ background-color: #F5F5F5;
+ font-family: 'Nunito', sans-serif;
+}
+
+.desktopProjects {
+  @media screen and (max-width: 1288px) {
+    display: none;
+  }
+}
+
+.tabletProjects, .mobileProjects {
+    display: none;
+}
+
+.tabletProjects {
+  @media screen and (max-width: 1288px) {
+    display: block;
+  }
+  @media screen and (max-width: 872px) {
+    display: none;
+  }
+}
+
+.mobileProjects {
+  @media screen and (max-width: 872px) {
+    display: block;
+  }
+}
+
+.grid {
+  text-align: center;
+  border-radius: 4px; }
+  @media screen and (max-width: 667px) {
+    .grid {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      align-content: center; } }
+
+/* Common style */
+.grid figure {
+  position: relative;
+  overflow: hidden;
+  min-width: 290px;
+  max-width: 290px;
+  max-height: 180px;
+  background: #95B6B7;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 1px 1px 8px black;
+  border-radius: 4px; }
+  @media screen and (max-width: 667px) {
+    .grid figure {
+      margin-top: 5%; } }
+
+.grid figure img {
+  position: relative;
+  left: -5px;
+  display: block;
+  height: 105%;
+  width: 105%;
+  opacity: 0.8;
+  border-radius: 4px; }
+
+.grid figure figcaption {
+  color: #fff;
+  text-shadow: 1px 1px 2px black;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden; }
+
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+  pointer-events: none; }
+
+.grid figure figcaption,
+.grid figure figcaption > a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+/* Anchor will cover the whole item by default */
+.grid figure figcaption > a {
+  z-index: 1000;
+  text-indent: 200%;
+  white-space: nowrap;
+  opacity: 0; }
+
+.grid figure h2,
+.grid figure p {
+  margin: 0; }
+
+.grid figure p {
+  font-size: 13.5px;
+  font-family: "Nunito"; }
+
+figure.effect-layla {
+  background: #53797a; }
+
+figure.effect-layla figcaption {
+  padding: 2em 1.2em; }
+
+figure.effect-layla figcaption::before,
+figure.effect-layla figcaption::after {
+  position: absolute;
+  content: '';
+  opacity: 0; }
+
+figure.effect-layla figcaption::before {
+  top: 15px;
+  right: 10px;
+  bottom: 15px;
+  left: 10px;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: scale(0, 1);
+  transform: scale(0, 1);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+
+figure.effect-layla figcaption::after {
+  top: 10px;
+  right: 15px;
+  bottom: 10px;
+  left: 15px;
+  border-right: 1px solid #fff;
+  border-left: 1px solid #fff;
+  -webkit-transform: scale(1, 0);
+  transform: scale(1, 0);
+  -webkit-transform-origin: 100% 0;
+  transform-origin: 100% 0; }
+
+figure.effect-layla h2 {
+  padding-top: 26%;
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: transform 0.35s; }
+
+figure.effect-layla p {
+  text-transform: none;
+  opacity: 0;
+  -webkit-transform: translate3d(0, -10px, 0);
+  transform: translate3d(0, -10px, 0); }
+
+figure.effect-layla img,
+figure.effect-layla h2 {
+  -webkit-transform: translate3d(0, -30px, 0);
+  transform: translate3d(0, -30px, 0); }
+
+figure.effect-layla img,
+figure.effect-layla figcaption::before,
+figure.effect-layla figcaption::after,
+figure.effect-layla p {
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s; }
+
+figure.effect-layla:hover img {
+  opacity: 0.3;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+figure.effect-layla:hover figcaption::before,
+figure.effect-layla:hover figcaption::after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1); }
+
+figure.effect-layla:hover h2,
+figure.effect-layla:hover p {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+figure.effect-layla:hover figcaption::after,
+figure.effect-layla:hover h2,
+figure.effect-layla:hover p,
+figure.effect-layla:hover img {
+  -webkit-transition-delay: 0.15s;
+  transition-delay: 0.15s; }

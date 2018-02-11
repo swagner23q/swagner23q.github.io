@@ -1,0 +1,20 @@
+.resumeButton {
+  display: block;
+  background-color: #6DE3D5;
+  color: #fff;
+  width: 250px;
+  padding: 20px;
+  text-align: center;
+  font-weight: 700;
+  border-radius: 8px;
+  font-size: 20px;
+  -webkit-box-shadow: 1px 3px 7px grey;
+          box-shadow: 1px 3px 7px grey;
+  @media screen and (max-width: 600px) {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+.resumeButton:hover {
+  background-color: darken(#6DE3D5, 15%);
+}

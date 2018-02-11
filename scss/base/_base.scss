@@ -1,0 +1,50 @@
+* {
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+.responsive-imgage {
+	width: 100%;
+	height: auto;
+}
+
+.mobileDisclaimer {
+  display: none;
+  padding: 15px;
+  text-align: center;
+  border: 7px solid $grey;
+  font-size: 18px;
+  background-color: #fff;
+  z-index: 2;
+
+  @media screen and (max-width: 667px) {
+    display: block;
+    position: fixed;
+    bottom: 0;
+  }
+}
+.avatar {
+  max-height: 350px;
+  position: absolute;
+  bottom: 2vh;
+  @media screen and (max-width: 705px) {
+    display: none;
+  }
+}
+.me {
+  @media screen and (max-width: 600px) {
+    max-height: 250px;
+  }
+
+}
+.icons {
+  padding-right: 25px;
+  height: 25px;
+}
+.center {
+  display: block;
+  text-align: -webkit-center!important;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}

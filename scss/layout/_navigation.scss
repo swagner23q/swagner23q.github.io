@@ -1,0 +1,109 @@
+header {
+  position: fixed;
+  background-color: #326273;
+  width: 100%;
+  top: -70px;
+  -webkit-box-shadow: 2px 3px 5px grey;
+          box-shadow: 2px 3px 5px grey;
+  z-index: 5;
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
+
+  ul {
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    li {
+      position: relative;
+      text-align: center;
+      float: right;
+      top: 35px;
+      padding: 0 2%;
+      }
+  }
+
+  ul.nav {
+    overflow: hidden;
+    }
+}
+
+header ul.nav li a {
+	display: block;
+	height: 50px;
+	opacity: 0;
+  width: 115px;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+
+}
+
+/* Style for header with active class name */
+
+header.active ul.nav li a {
+  height: 120px;
+	opacity: 1;
+  line-height: 120px;
+  cursor: pointer;
+  color: #fff;
+  text-decoration: none;
+}
+
+
+header.active ul.nav li .logo {
+  position: relative;
+  right: 37vw;
+  @media screen and (max-width: 980px) {
+    right: 25vw;
+  }
+  @media screen and (max-width: 820px) {
+    right: unset;
+    position: inherit;
+  }
+}
+
+/* Style for the plus button */
+
+button.toggle-nav {
+  position: absolute;
+  top: 100%;
+  left: calc(50% - 23px);
+  width: 60px;
+  height: 35px;
+  background-color: #38a6a6;
+  font-size: 1.2em;
+  color: #fff;
+  border: none;
+  line-height: 30px;
+  vertical-align: middle;
+  outline: none;
+  cursor: pointer;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  // -ms-transition: all 0.25s ease;
+}
+button.toggle-nav:hover {
+  	height: 50px;
+}
+button.toggle-nav span {
+	  display: block;
+  	-webkit-transform: rotate(90deg);
+  	-moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+  	-webkit-transition: all 0.25s ease;
+  	-moz-transition: all 0.25s ease;
+    // -ms-transition: all 0.25s ease;
+}
+
+header.active button.toggle-nav {
+  top: 100%;
+  background-color: #256f6f;
+}
+header.active button.toggle-nav span {
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+}
